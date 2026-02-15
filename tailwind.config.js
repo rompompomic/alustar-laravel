@@ -86,3 +86,4 @@ export default {
         require('@tailwindcss/typography'),
     ],
 };
+// Force update for Tailwind V3 opacity support
