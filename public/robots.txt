@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /nova/
+Disallow: /admin/
+Allow: /
+
+Sitemap: /sitemap.xml
