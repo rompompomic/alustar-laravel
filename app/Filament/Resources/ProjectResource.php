@@ -98,17 +98,23 @@ class ProjectResource extends Resource
                             FileUpload::make('cover_image')
                                 ->label('Vāka attēls (Cover Image)')
                                 ->image()
+                                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                                ->maxSize(10240)
                                 ->directory('projects/covers')
                                 ->visibility('public')
+                                ->helperText('Maks. izmērs: 10MB. Formāti: JPG, PNG, WEBP.')
                                 ->required(),
 
                             FileUpload::make('gallery_images')
                                 ->label('Galerija (Gallery)')
                                 ->image()
+                                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                                ->maxSize(10240)
                                 ->multiple()
                                 ->reorderable()
                                 ->directory('projects/gallery')
                                 ->visibility('public')
+                                ->helperText('Maks. izmērs: 10MB. Formāti: JPG, PNG, WEBP.')
                                 ->columnSpanFull(),
                                 
                              Section::make('Saraksti (Lists)')
