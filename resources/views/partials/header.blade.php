@@ -13,12 +13,38 @@
                 </a>
             </div>
             
+@php
+    $currentRouteName = Route::currentRouteName();
+    $ruUrl = url('ru');
+    
+    if ($currentRouteName === 'buvnieciba') {
+        $ruUrl = route('ru.buvnieciba');
+    } elseif ($currentRouteName === 'renovacija') {
+        $ruUrl = route('ru.renovacija');
+    } elseif ($currentRouteName === 'stiklokonstrukcijas') {
+        $ruUrl = route('ru.stiklokonstrukcijas');
+    } elseif ($currentRouteName === 'projects') {
+        $ruUrl = route('ru.projects');
+    } elseif ($currentRouteName === 'project.show') {
+         // Assuming same slug for now, or just go to projects index if slug logic is complex
+         $ruUrl = route('ru.projects'); 
+    } elseif ($currentRouteName === 'about') {
+        $ruUrl = route('ru.about');
+    } elseif ($currentRouteName === 'contact.store') { // fallback
+         $ruUrl = route('ru.home') . '#contact';
+    } elseif ($currentRouteName === 'home') {
+        $ruUrl = route('ru.home');
+    } else {
+        // Fallback for generic paths
+        $ruUrl = url('ru/' . (request()->path() == '/' ? '' : request()->path()));
+    }
+@endphp
             <div class="flex items-center gap-1">
                 <a href="{{ url('/') }}" class="px-1.5 font-bold text-xs tracking-[-0.24px] leading-3 whitespace-nowrap hover:opacity-70 transition-opacity text-primary">
                     LV
                 </a>
                 <div class="w-px h-3 bg-border"></div>
-                <a href="{{ url('ru/' . (request()->path() == '/' ? '' : request()->path())) }}" class="px-1.5 font-normal text-xs tracking-[-0.24px] leading-3 whitespace-nowrap hover:opacity-70 transition-opacity text-muted-foreground">
+                <a href="{{ $ruUrl }}" class="px-1.5 font-normal text-xs tracking-[-0.24px] leading-3 whitespace-nowrap hover:opacity-70 transition-opacity text-muted-foreground">
                     RU
                 </a>
             </div>
@@ -40,8 +66,13 @@
                 </a>
             </li>
             <li>
+                <a href="{{ url('/renovacija') }}" class="block font-medium text-foreground/80 text-sm tracking-wide hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+                    Renovācija
+                </a>
+            </li>
+            <li>
                 <a href="{{ url('/stiklokonstrukcijas') }}" class="block font-medium text-foreground/80 text-sm tracking-wide hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-                    Stiklokonstrukcijas
+                    Stikla konstrukcijas
                 </a>
             </li>
             <li>

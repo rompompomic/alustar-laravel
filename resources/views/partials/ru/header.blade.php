@@ -13,8 +13,40 @@
                 </a>
             </div>
             
+@php
+    $currentRouteName = Route::currentRouteName();
+    $lvUrl = url('/');
+    
+    // Check if we are in a named route and map back to LV
+    if ($currentRouteName === 'ru.buvnieciba') {
+        $lvUrl = route('buvnieciba');
+    } elseif ($currentRouteName === 'ru.renovacija') {
+        $lvUrl = route('renovacija');
+    } elseif ($currentRouteName === 'ru.stiklokonstrukcijas') {
+        $lvUrl = route('stiklokonstrukcijas');
+    } elseif ($currentRouteName === 'ru.projects') {
+        $lvUrl = route('projects');
+    } elseif ($currentRouteName === 'project.show') {
+         // Assuming same slug
+         $lvUrl = route('projects'); 
+    } elseif ($currentRouteName === 'ru.about') {
+        $lvUrl = route('about');
+    } elseif ($currentRouteName === 'ru.home') {
+        $lvUrl = route('home');
+    } else {
+        // Fallback: remove 'ru' prefix from path
+        $path = request()->path();
+        if (Str::startsWith($path, 'ru/')) {
+            $lvUrl = url(Str::replaceFirst('ru/', '', $path));
+        } elseif ($path === 'ru') {
+             $lvUrl = url('/');
+        } else {
+             $lvUrl = url('/');
+        }
+    }
+@endphp
             <div class="flex items-center gap-1">
-                <a href="{{ url(Str::replaceFirst('ru', '', request()->path()) == '' ? '/' : Str::replaceFirst('ru/', '', request()->path())) }}" class="px-1.5 font-normal text-xs tracking-[-0.24px] leading-3 whitespace-nowrap hover:opacity-70 transition-opacity text-foreground">
+                <a href="{{ $lvUrl }}" class="px-1.5 font-normal text-xs tracking-[-0.24px] leading-3 whitespace-nowrap hover:opacity-70 transition-opacity text-foreground">
                     LV
                 </a>
                 <div class="w-px h-3 bg-border"></div>
@@ -35,8 +67,13 @@
         <!-- Desktop Navigation Items -->
         <ul class="hidden lg:flex items-center gap-8">
             <li>
-                <a href="{{ url('/ru/buvnieciba') }}" class="block font-medium text-foreground/80 text-sm tracking-wide hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+                <a href="{{ url('/ru/stroitelstvo') }}" class="block font-medium text-foreground/80 text-sm tracking-wide hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
                     Строительство
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('/ru/renovacija') }}" class="block font-medium text-foreground/80 text-sm tracking-wide hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+                    Реновация
                 </a>
             </li>
             <li>

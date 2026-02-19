@@ -1,14 +1,14 @@
 ﻿@extends('layouts.app-ru')
 
-@section('title', 'Cтроительство - Генподряд - AluStar')
-@section('meta_description', 'Жилые и коммерческие объекты в Латвии. От концепции до сдачи в эксплуатацию.')
+@section('title', 'Строительство - AluStar')
+@section('meta_description', 'Предлагаем услуги генерального подряда и строительство полного цикла для жилых и коммерческих объектов в Латвии от концепции до сдачи в эксплуатацию.')
 
 @section('content')
     <div x-data="{ projectFilter: 'all' }">
         {{-- 1. HERO --}}
         <section class="relative w-full h-[500px] md:h-[600px] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('assets/hero-buvnieciba.webp') }}')"></div>
-            <div class="absolute inset-0 bg-secondary/60"></div>
+            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.7);"></div>
             <div class="relative h-full flex items-end">
                 <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 w-full pb-16 md:pb-20">
                     <span class="inline-block text-xs font-medium text-primary-foreground/70 uppercase tracking-widest mb-4">Строительство</span>
@@ -21,8 +21,8 @@
                         <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all">
                             Обсудить проект <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-background text-foreground rounded-lg font-medium hover:bg-muted transition-all">
-                            Получить расчет бюджета
+                        <a href="{{ route('ru.renovacija') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-all">
+                            Смотреть проекты реновации
                         </a>
                     </div>
                 </div>

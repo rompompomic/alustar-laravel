@@ -12,10 +12,11 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'company' => 'required|string|max:255',
+            'company' => 'nullable|string|max:255',
             'contact' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:50',
+            'pvn' => 'nullable|string|max:50',
             'projectDescription' => 'nullable|string|max:2000',
         ]);
 

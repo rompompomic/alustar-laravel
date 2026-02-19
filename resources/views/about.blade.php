@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('title', 'Par mums - AluStar')
-@section('meta_description', 'Par AluStar: pieredze, komanda, vērtības un sadarbība.')
+@section('meta_description', 'Uzziniet vairāk par AluStar: mūsu pieredze, komanda, vērtības un veiksmīga sadarbība.')
 
 @section('content')
     @php
     $facts = [
         ["value" => "2007", "label" => "Dibināšanas gads"],
-        ["value" => "17+", "label" => "Gadu pieredze"],
+        ["value" => "19+", "label" => "Gadu pieredze"],
         ["value" => "EU", "label" => "Eiropas standarti"],
         ["value" => "100%", "label" => "Pilna atbildība"]
     ];
@@ -20,7 +20,7 @@
         ],
         [
             "icon" => "users",
-            "title" => "Komanda",
+            "title" => "Mūsu komanda",
             "description" => "Izcils profesionālās komandas darbs ir mūsu panākumu pamatā."
         ],
         [
@@ -42,7 +42,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div class="space-y-6">
                     <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-2">
-                        Par mums
+                        Par uzņēmumu
                     </span>
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
                         Jūsu komforts un mājīgums — mūsu mērķis

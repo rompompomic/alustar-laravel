@@ -20,6 +20,10 @@ Route::get('/buvnieciba', function () {
     return view('buvnieciba', compact('projects'));
 })->name('buvnieciba');
 
+Route::get('/renovacija', function () {
+    return view('renovacija');
+})->name('renovacija');
+
 Route::get('/stiklokonstrukcijas', function () {
     $projects = Project::where('show_on_glass', true)->get();
     return view('stiklokonstrukcijas', compact('projects'));
@@ -42,10 +46,14 @@ Route::prefix('ru')->name('ru.')->group(function () {
         return view('ru.about');
     })->name('about');
 
-    Route::get('/buvnieciba', function () {
+    Route::get('/stroitelstvo', function () {
         $projects = Project::where('show_on_construction', true)->get();
         return view('ru.buvnieciba', compact('projects'));
     })->name('buvnieciba');
+
+    Route::get('/renovacija', function () {
+        return view('ru.renovacija');
+    })->name('renovacija');
 
     Route::get('/stiklokonstrukcijas', function () {
         $projects = Project::where('show_on_glass', true)->get();

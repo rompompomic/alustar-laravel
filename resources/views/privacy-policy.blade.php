@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Privātuma politika - AluStar')
-@section('meta_description', 'Privātuma politika un personas datu apstrādes noteikumi')
+@section('meta_description', 'Iepazīstieties ar mūsu privātuma politiku un personas datu apstrādes noteikumiem.')
 
 @section('content')
 <div class="max-w-[800px] mx-auto px-4 md:px-8 py-16 md:py-24 w-full flex-1">

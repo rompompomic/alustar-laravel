@@ -1,13 +1,13 @@
 @extends('layouts.app-ru')
 
 @section('title', 'О нас - AluStar')
-@section('meta_description', 'О AluStar: опыт, команда, ценности и сотрудничество.')
+@section('meta_description', 'Узнайте больше о AluStar: наш опыт, команда, ценности и успешное сотрудничество.')
 
 @section('content')
     @php
     $facts = [
         ["value" => "2007", "label" => "Год основания"],
-        ["value" => "17+", "label" => "Лет опыта"],
+        ["value" => "19+", "label" => "Лет опыта"],
         ["value" => "EU", "label" => "Европейские стандарты"],
         ["value" => "100%", "label" => "Полная ответственность"]
     ];

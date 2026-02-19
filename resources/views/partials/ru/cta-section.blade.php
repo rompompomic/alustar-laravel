@@ -79,24 +79,26 @@
 
                 <form x-data="{ isSubmitting: false }" @submit="isSubmitting = true" action="{{ route('contact.store') }}" method="POST" class="bg-background rounded-2xl p-6 md:p-8 shadow-2xl">
                     @csrf
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
-                        <div class="space-y-2">
-                            <label for="company" class="text-sm font-medium text-foreground">Компания <span class="text-red-500">*</span></label>
-                            <input id="company" name="company" required placeholder="Название компании" value="{{ old('company') }}" class="h-11 w-full rounded-md border border-input bg-muted/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors">
-                        </div>
+                    <div class="grid grid-cols-1 gap-4 md:gap-6 mb-4 md:mb-6">
                         <div class="space-y-2">
                             <label for="contact" class="text-sm font-medium text-foreground">Контактное лицо <span class="text-red-500">*</span></label>
                             <input id="contact" name="contact" required placeholder="Ваше имя" value="{{ old('contact') }}" class="h-11 w-full rounded-md border border-input bg-muted/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors">
                         </div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+                        <div class="space-y-2">
+                            <label for="phone" class="text-sm font-medium text-foreground">Телефон <span class="text-red-500">*</span></label>
+                            <input id="phone" name="phone" type="tel" required placeholder="+371 20000000" value="{{ old('phone') }}" class="h-11 w-full rounded-md border border-input bg-muted/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors">
+                        </div>
                         <div class="space-y-2">
                             <label for="email" class="text-sm font-medium text-foreground">Эл. почта <span class="text-red-500">*</span></label>
                             <input id="email" name="email" type="email" required placeholder="janis@uznemums.lv" value="{{ old('email') }}" class="h-11 w-full rounded-md border border-input bg-muted/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors">
                         </div>
                         <div class="space-y-2">
-                            <label for="phone" class="text-sm font-medium text-foreground">Телефон <span class="text-red-500">*</span></label>
-                            <input id="phone" name="phone" type="tel" required placeholder="+371 20000000" value="{{ old('phone') }}" class="h-11 w-full rounded-md border border-input bg-muted/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors">
+                            <label for="company" class="text-sm font-medium text-foreground">Название компании <span class="text-muted-foreground font-normal">(необязательно)</span></label>
+                            <input id="company" name="company" placeholder="SIA..." value="{{ old('company') }}" class="h-11 w-full rounded-md border border-input bg-muted/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="pvn" class="text-sm font-medium text-foreground">PVN номер <span class="text-muted-foreground font-normal">(необязательно)</span></label>
+                            <input id="pvn" name="pvn" placeholder="LV..." value="{{ old('pvn') }}" class="h-11 w-full rounded-md border border-input bg-muted/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors">
                         </div>
                     </div>
                     <div class="space-y-2 mb-6">

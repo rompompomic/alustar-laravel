@@ -1,19 +1,19 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
-@section('title', 'Būvniecība - Ģenerāluzņēmējs - AluStar')
-@section('meta_description', 'Dzīvojamie un komerciālie objekti Latvijā. No koncepcijas līdz nodošanai ekspluatācijā.')
+@section('title', 'Būvniecība - AluStar')
+@section('meta_description', 'Piedāvājam pilna cikla būvniecības un ģenerāluzņēmēja pakalpojumus dzīvojamiem un komerciāliem objektiem Latvijā no koncepcijas līdz nodošanai ekspluatācijā.')
 
 @section('content')
     <div x-data="{ projectFilter: 'all' }">
         {{-- 1. HERO --}}
         <section class="relative w-full h-[500px] md:h-[600px] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('assets/hero-buvnieciba.webp') }}')"></div>
-            <div class="absolute inset-0 bg-secondary/60"></div>
+            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.7);"></div>
             <div class="relative h-full flex items-end">
                 <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 w-full pb-16 md:pb-20">
                     <span class="inline-block text-xs font-medium text-primary-foreground/70 uppercase tracking-widest mb-4">Būvniecība</span>
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-tight mb-4 max-w-3xl">
-                        AluStar  Ģenerāluzņēmējs un pilna cikla būvniecība
+                        AluStar Ģenerāluzņēmējs un pilna cikla būvniecība
                     </h1>
                     <p class="text-base md:text-lg text-primary-foreground/80 mb-2 max-w-2xl">Dzīvojamie un komerciālie objekti Latvijā</p>
                     <p class="text-sm text-primary-foreground/60 mb-8">No koncepcijas līdz nodošanai ekspluatācijā.</p>
@@ -21,8 +21,8 @@
                         <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all">
                             Apspriest projektu <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-background text-foreground rounded-lg font-medium hover:bg-muted transition-all">
-                            Saņemt tāmi
+                        <a href="{{ route('renovacija') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-all">
+                            Skatīt renovācijas projektus
                         </a>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                         </div>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3 text-sm text-muted-foreground"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary mt-0.5 shrink-0"></i>Daudzdzīvokļu ēku būvniecība</li>
-                            <li class="flex items-start gap-3 text-sm text-muted-foreground"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary mt-0.5 shrink-0"></i>Ģenerāluzņēmējs "atslēgas"</li>
+                            <li class="flex items-start gap-3 text-sm text-muted-foreground"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary mt-0.5 shrink-0"></i>Ģenerāluzņēmējs</li>
                             <li class="flex items-start gap-3 text-sm text-muted-foreground"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary mt-0.5 shrink-0"></i>Budžeta un termiņu kontrole</li>
                             <li class="flex items-start gap-3 text-sm text-muted-foreground"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary mt-0.5 shrink-0"></i>Apakšuzņēmēju koordinācija</li>
                             <li class="flex items-start gap-3 text-sm text-muted-foreground"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary mt-0.5 shrink-0"></i>Atbalsts nodošanā ekspluatācijā</li>
@@ -153,7 +153,7 @@
                         <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-5">
                             <i data-lucide="hammer" class="w-5 h-5 text-primary"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-foreground mb-4">Konstruktīvs</h3>
+                        <h3 class="text-lg font-semibold text-foreground mb-4">Konstruktīvie darbi</h3>
                         <ul class="space-y-2">
                             <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Zemes darbi</li>
                             <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Pamati</li>
@@ -196,7 +196,7 @@
                             <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Ugunsdrošās durvis</li>
                              <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Vitrīnu sistēmas</li>
                         </ul>
-                        <p class="mt-4 text-xs text-muted-foreground/70 italic border-t border-border/50 pt-3">Atsevišķs virziens "Stikla konstrukcijas" eksistē gan kā patstāvīga sadaļa, gan kā kompleksās būvniecības sastāvdaļa.</p>
+                        <p class="mt-4 text-xs text-muted-foreground/70 italic border-t border-border/50 pt-3">Atsevišķs virziens "Stikla konstrukcijas" eksistē gan kā patstāvīga sadaļa, gan kā kompleksas būvniecības sastāvdaļa.</p>
                     </div>
 
                      {{-- Areja infrastruktura --}}
@@ -232,7 +232,7 @@
                             <i data-lucide="briefcase" class="w-6 h-6 text-primary transition-colors"></i>
                         </div>
                         <h4 class="text-base font-semibold text-foreground mb-2">Ģenerāluzņēmējs</h4>
-                        <p class="text-sm text-muted-foreground leading-relaxed">Pilna atbildība par projektu  no projektēšanas līdz nodošanai ekspluatācijā</p>
+                        <p class="text-sm text-muted-foreground leading-relaxed">Pilna atbildība par projektu no projektēšanas līdz nodošanai ekspluatācijā</p>
                     </div>
                     <div class="group p-6 md:p-8 bg-background rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md">
                         <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 -mt-2 transition-colors">
@@ -263,7 +263,7 @@
                             <i data-lucide="key-round" class="w-6 h-6 text-primary transition-colors"></i>
                         </div>
                         <h4 class="text-base font-semibold text-foreground mb-2">Kompleksie risinājumi "atslēgas"</h4>
-                        <p class="text-sm text-muted-foreground leading-relaxed">No koncepcijas līdz nodošanai  pilns cikls</p>
+                        <p class="text-sm text-muted-foreground leading-relaxed">No koncepcijas līdz nodošanai – pilns cikls</p>
                     </div>
                 </div>
             </div>
@@ -338,7 +338,7 @@
         <section class="w-full py-16 md:py-24 bg-[#e8e8ee]">
             <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
                 <div class="text-center mb-12">
-                    <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-3">Portfolio</span>
+                    <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-3">Projekti</span>
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground tracking-tight">Realizētie projekti</h2>
                 </div>
 
@@ -357,7 +357,7 @@
                                 @endif
                                 
                                 <div class="absolute top-4 left-4 ml-2 px-3 py-1.5 rounded-full bg-primary z-10 w-fit">
-                                    <span class="text-xs font-medium text-white">{{ App::getLocale() === 'ru' ? ($project->tag_1_ru ?? 'Проект') : ($project->tag_1_lv ?? 'Projekts') }}</span>
+                                    <span class="text-xs font-medium text-white">{{ App::getLocale() === 'ru' ? ($project->tag_1_ru ?? '������') : ($project->tag_1_lv ?? 'Projekts') }}</span>
                                 </div>
                             </a>
                             <div class="p-6 flex flex-col flex-1">
@@ -381,7 +381,7 @@
                         </div>
                     @empty
                         <div class="col-span-full text-center py-12 text-muted-foreground">
-                            {{ App::getLocale() === 'ru' ? 'Проекты не найдены.' : 'Projekti nav atrasti.' }}
+                            {{ App::getLocale() === 'ru' ? '������� �� �������.' : 'Projekti nav atrasti.' }}
                         </div>
                     @endforelse
                 </div>
@@ -401,22 +401,22 @@
                         <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 transition-colors">
                             <i data-lucide="award" class="w-6 h-6 text-primary transition-colors"></i>
                         </div>
-                        <h4 class="text-base font-semibold text-foreground mb-2">15+ gadu pieredze</h4>
-                        <p class="text-sm text-muted-foreground leading-relaxed">Sarežģītu objektu realizācija  no daudzdzīvokļu mājām līdz industriāliem kompleksiem</p>
+                        <h4 class="text-base font-semibold text-foreground mb-2">19+ gadu pieredze</h4>
+                        <p class="text-sm text-muted-foreground leading-relaxed">Sarežģītu objektu realizācija no daudzdzīvokļu mājām līdz industriāliem kompleksiem</p>
                     </div>
                     <div class="group flex flex-col items-center text-center p-6 md:p-8 bg-muted/30 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md">
                         <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 transition-colors">
                             <i data-lucide="layers" class="w-6 h-6 text-primary transition-colors"></i>
                         </div>
                         <h4 class="text-base font-semibold text-foreground mb-2">Viss zem viena jumta</h4>
-                        <p class="text-sm text-muted-foreground leading-relaxed">Konstruktīvs, inženiersistēmas, fasādes un ārējā infrastruktūra  bez starpnieku ķēdēm</p>
+                        <p class="text-sm text-muted-foreground leading-relaxed">Konstruktīvs, inženiersistēmas, fasādes un ārējā infrastruktūra bez starpnieku ķēdēm</p>
                     </div>
                      <div class="group flex flex-col items-center text-center p-6 md:p-8 bg-muted/30 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md">
                         <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 transition-colors">
                             <i data-lucide="shield" class="w-6 h-6 text-primary transition-colors"></i>
                         </div>
                         <h4 class="text-base font-semibold text-foreground mb-2">Kompetence stikla konstrukcijās</h4>
-                        <p class="text-sm text-muted-foreground leading-relaxed">Sava alumīnija un stikla ražotne  ātrāka reakcija, zemākas izmaksas, augstāka kvalitāte</p>
+                        <p class="text-sm text-muted-foreground leading-relaxed">Sava alumīnija un stikla ražotne – ātrāka reakcija, zemākas izmaksas, augstāka kvalitāte</p>
                     </div>
                 </div>
                 {{-- Bottom row: 2 centered --}}
@@ -426,14 +426,14 @@
                             <i data-lucide="trending-up" class="w-6 h-6 text-primary transition-colors"></i>
                         </div>
                         <h4 class="text-base font-semibold text-foreground mb-2">Budžets un termiņi</h4>
-                        <p class="text-sm text-muted-foreground leading-relaxed">Iknedēļas atskaites, fiksētas tāmes, sodi par kavējumiem  mēs uzņemamies risku</p>
+                        <p class="text-sm text-muted-foreground leading-relaxed">Iknedēļas atskaites, fiksētas tāmes, sodi par kavējumiem – mēs uzņemamies risku</p>
                     </div>
                      <div class="group flex flex-col items-center text-center p-6 md:p-8 bg-muted/30 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md">
                         <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 transition-colors">
                             <i data-lucide="file-text" class="w-6 h-6 text-primary transition-colors"></i>
                         </div>
                         <h4 class="text-base font-semibold text-foreground mb-2">Garantija līdz 5 gadiem</h4>
-                        <p class="text-sm text-muted-foreground leading-relaxed">Pilna garantijas apkalpošana pēc nodošanas  ar dokumentētu atbildības sadalījumu</p>
+                        <p class="text-sm text-muted-foreground leading-relaxed">Pilna garantijas apkalpošana pēc nodošanas ar dokumentētu atbildības sadalījumu</p>
                     </div>
                 </div>
             </div>

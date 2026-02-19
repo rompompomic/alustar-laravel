@@ -1,6 +1,6 @@
 <footer class="w-full bg-secondary text-secondary-foreground">
     <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <div>
                 <img src="{{ asset('assets/alustar-logo.webp') }}" alt="AluStar Logo" class="h-8 mb-4 brightness-0 invert">
                 <p class="text-sm text-secondary-foreground/70 leading-relaxed mb-6">Инженерно-техническое предприятие по алюминиево-стеклянным конструкциям.</p>
@@ -40,6 +40,18 @@
                             Ул. Тинужу 1А, Рига, LV-1021
                         </div>
                     </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Реквизиты</h4>
+                <ul class="space-y-3 text-sm text-secondary-foreground/70">
+                    <li>AluStar SIA</li>
+                    <li>Рег. № 40003915218</li>
+                    <li>PVN (VAT) № LV40003915218</li>
+                    <li>Юридический адрес: Tīnužu 1A-1, Rīga, LV-1021, Latvija</li>
+                    <li>Банк: Swedbank AS</li>
+                    <li>SWIFT: HABALV22</li>
+                    <li>Account (IBAN): LV94HABA0551016475327</li>
                 </ul>
             </div>
         </div>

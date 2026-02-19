@@ -1,7 +1,7 @@
 @extends('layouts.app-ru')
 
 @section('title', 'Стеклянные конструкции - AluStar')
-@section('meta_description', 'Проектирование, производство и монтаж алюминиево-стеклянных конструкций.')
+@section('meta_description', 'Предлагаем проектирование, производство и монтаж алюминиево-стеклянных конструкций, обеспечивая высокое качество.')
 
 @section('content')
     @php
@@ -76,6 +76,11 @@
             "items" => ["Портальные системы", "Раздвижные конструкции для террас", "Складные системы"]
         ],
         [
+            "icon" => "maximize",
+            "title" => "Безрамные стеклянные конструкции",
+            "items" => ["Безрамные перегородки", "Стеклянные двери", "Стеклянные перила", "Стеклянные балконные системы"]
+        ],
+        [
             "icon" => "snowflake",
             "title" => "Индивидуальные алюминиевые конструкции",
             "items" => ["Зимние сады", "Навесы", "Стеклянные ограждения"]
@@ -115,7 +120,7 @@
     ];
 
     $whyUs = [
-        ["icon" => "award", "title" => "Опыт 15+ лет", "desc" => "Сотни реализованных проектов фасадов и остекления в жилом и коммерческом сегментах."],
+        ["icon" => "award", "title" => "Опыт 19+ лет", "desc" => "Сотни реализованных проектов фасадов и остекления в жилом и коммерческом сегментах."],
         ["icon" => "layers", "title" => "Комплексный подход", "desc" => "От проектирования до монтажа — всё в одной компании без цепочек посредников."],
         ["icon" => "building-2", "title" => "Формат генподряда", "desc" => "Интегрируемся в строительный процесс и работаем согласно общему графику."],
         ["icon" => "shield", "title" => "Гарантия до 5 лет", "desc" => "Европейские стандарты качества и сертифицированные материалы с долгосрочной гарантией."],
@@ -129,7 +134,7 @@
         <!-- HERO -->
         <section class="relative w-full h-[500px] md:h-[600px] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('assets/hero-steklokonstrukcii.webp') }}')"></div>
-            <div class="absolute inset-0 bg-primary/40"></div>
+            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.7);"></div>
             <div class="relative h-full flex items-end">
                 <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 w-full pb-16 md:pb-20">
                     <span class="inline-block text-xs font-medium text-primary-foreground/70 uppercase tracking-widest mb-4">
@@ -268,7 +273,7 @@
         <section class="w-full py-16 md:py-24 bg-background">
             <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
                 <div class="text-center mb-12">
-                    <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-3">Портфолио</span>
+                    <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-3">Проекты</span>
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground tracking-tight">Реализованные проекты</h2>
                 </div>
                 

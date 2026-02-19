@@ -1,7 +1,7 @@
 @extends(app()->getLocale() === 'ru' ? 'layouts.app-ru' : 'layouts.app')
 
-@section('title', 'Projekti - AluStar')
-@section('meta_description', 'Mūsu realizētie projekti: dzīvojamās ēkas, komerciālie objekti un sabiedriskās būves.')
+@section('title', app()->getLocale() === 'ru' ? 'Проекты - AluStar' : 'Projekti - AluStar')
+@section('meta_description', app()->getLocale() === 'ru' ? 'Ознакомьтесь с нашими реализованными проектами: жилые здания, коммерческие объекты и общественные сооружения.' : 'Apskatiet mūsu realizētos projektus: dzīvojamās ēkas, komerciālie objekti un sabiedriskās būves.')
 
 @section('content')
     @php
@@ -15,7 +15,7 @@
             <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
                 <div class="max-w-3xl">
                     <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-4">
-                        Portfolio
+                        {{ $isRu ? 'Проекты' : 'Projekti' }}
                     </span>
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight mb-6">
                         {{ $isRu ? 'Реализованные проекты' : 'Realizētie projekti' }}

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Stiklokonstrukcijas - AluStar')
-@section('meta_description', 'Alumīnija-stikla konstrukciju projektēšana, ražošana un montāža.')
+@section('title', 'Stikla konstrukcijas - AluStar')
+@section('meta_description', 'Piedāvājam alumīnija-stikla konstrukciju projektēšanu, ražošanu un montāžu, nodrošinot augstāko kvalitāti.')
 
 @section('content')
     @php
@@ -53,7 +53,7 @@
         [
             "icon" => "home",
             "title" => "Logi",
-            "items" => ["Plastikāta logi", "Alumīnija logi", "Koka-alumīnija sistēmas", "Energoefektīvi stikla paketes"]
+            "items" => ["Plastikāta logi", "Alumīnija logi", "Koka-alumīnija sistēmas", "Energoefektīvas stikla paketes"]
         ],
         [
             "icon" => "door-open",
@@ -76,6 +76,11 @@
             "items" => ["Portāla sistēmas", "Terašu bīdāmās konstrukcijas", "Saliekamās sistēmas"]
         ],
         [
+            "icon" => "maximize", 
+            "title" => "Bezrāmju stikla konstrukcijas",
+            "items" => ["Bezrāmju starpsienas", "Bezrāmju stikla durvis", "Stikla margas", "Stikla balkonu sistēmas"]
+        ],
+        [
             "icon" => "snowflake",
             "title" => "Individuālas alumīnija konstrukcijas",
             "items" => ["Ziemas dārzi", "Nojumes", "Stikla nožogojumi"]
@@ -86,7 +91,7 @@
         "Alumīnija profilu sistēmas",
         "Plastikāta profilu sistēmas",
         "Koks un koka-alumīnijs",
-        "Energoefektīvi stikla paketes",
+        "Energoefektīvas stikla paketes",
         "Moderna furnitūra",
         "Automatizētas atvēršanas sistēmas",
     ];
@@ -115,7 +120,7 @@
     ];
 
     $whyUs = [
-        ["icon" => "award", "title" => "15+ gadu pieredze", "desc" => "Simtiem realizētu fasāžu un stiklojuma projektu dzīvojamajā un komerciālajā segmentā."],
+        ["icon" => "award", "title" => "19+ gadu pieredze", "desc" => "Simtiem realizētu fasāžu un stiklojuma projektu dzīvojamajā un komerciālajā segmentā."],
         ["icon" => "layers", "title" => "Kompleksa pieeja", "desc" => "No projektēšanas līdz montāžai — viss vienā uzņēmumā bez starpnieku ķēdēm."],
         ["icon" => "building-2", "title" => "Ģenerāluzņēmuma formāts", "desc" => "Integrējamies būvniecības procesā un strādājam saskaņā ar kopējo grafiku."],
         ["icon" => "shield", "title" => "Garantija līdz 5 gadiem", "desc" => "Eiropas kvalitātes standarti un sertificēti materiāli ar ilgtermiņa garantiju."],
@@ -129,14 +134,14 @@
         <!-- HERO -->
         <section class="relative w-full h-[500px] md:h-[600px] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('assets/hero-steklokonstrukcii.webp') }}')"></div>
-            <div class="absolute inset-0 bg-primary/40"></div>
+            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.7);"></div>
             <div class="relative h-full flex items-end">
                 <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 w-full pb-16 md:pb-20">
                     <span class="inline-block text-xs font-medium text-primary-foreground/70 uppercase tracking-widest mb-4">
-                        Stiklokonstrukcijas
+                        Stikla konstrukcijas
                     </span>
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-tight mb-4 max-w-3xl">
-                        Stiklokonstrukcijas un alumīnija fasāžu sistēmas
+                        Stikla konstrukcijas un alumīnija fasāžu sistēmas
                     </h1>
                     <p class="text-base md:text-lg text-primary-foreground/80 mb-2 max-w-2xl">
                         Ražošana, projektēšana un montāža visā Latvijā.
@@ -268,7 +273,7 @@
         <section class="w-full py-16 md:py-24 bg-background">
             <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
                 <div class="text-center mb-12">
-                    <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-3">Portfolio</span>
+                    <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-3">Projekti</span>
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground tracking-tight">Realizētie projekti</h2>
                 </div>
                 
