@@ -107,9 +107,9 @@
 </nav>
 
 <!-- Mobile Menu Overlay -->
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300 lg:hidden">
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300 lg:hidden">
     <!-- Mobile Menu Panel -->
-    <div id="mobile-menu" class="fixed right-0 top-0 h-full w-[300px] bg-background border-l border-border shadow-xl transform translate-x-full transition-transform duration-300 ease-out z-50 flex flex-col">
+    <div id="mobile-menu" class="fixed right-0 top-0 h-full w-[300px] bg-background border-l border-border shadow-xl transform translate-x-full transition-transform duration-300 ease-out z-[70] flex flex-col">
         <!-- Header -->
         <div class="flex items-center justify-between p-4 border-b border-border">
             <img src="{{ asset('assets/alustar-logo.webp') }}" alt="AluStar Logo" class="h-8 w-auto">
@@ -145,6 +145,9 @@
             <nav class="flex flex-col">
                 <a href="{{ url('/buvnieciba') }}" class="w-full text-left px-6 py-4 text-lg font-medium text-foreground hover:bg-muted transition-colors border-b border-border/50">
                     Būvniecība
+                </a>
+                <a href="{{ url('/renovacija') }}" class="w-full text-left px-6 py-4 text-lg font-medium text-foreground hover:bg-muted transition-colors border-b border-border/50">
+                    Renovācija
                 </a>
                 <a href="{{ url('/stiklokonstrukcijas') }}" class="w-full text-left px-6 py-4 text-lg font-medium text-foreground hover:bg-muted transition-colors border-b border-border/50">
                     Stikla konstrukcijas
