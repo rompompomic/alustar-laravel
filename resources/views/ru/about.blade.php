@@ -68,23 +68,19 @@
     <!-- Mission Section -->
     <section class="w-full py-16 md:py-24 bg-[#e8e8ee]">
         <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                <!-- Left Column - Heading & Quote -->
-                <div class="space-y-8">
-                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                 <!-- Right Column - Text Content (Now Left) -->
+                 <div class="space-y-6">
+                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight">
                         Никогда не останавливаемся
                     </h2>
-
-                    <!-- Quote Block -->
+                    
                     <div class="relative pl-6 border-l-4 border-primary">
                         <p class="text-lg md:text-xl font-medium text-foreground leading-relaxed">
                             Трудности? Это вызов и стимул стать еще лучше; они заряжают энергией и не позволяют останавливаться!
                         </p>
                     </div>
-                </div>
 
-                <!-- Right Column - Text Content -->
-                <div class="space-y-6 lg:pt-2">
                     <p class="text-base md:text-lg text-muted-foreground leading-relaxed">
                         Мы никогда не останавливаемся в стремлении предложить клиентам лучшие услуги, и всегда находимся в поиске новых
                         решений, чтобы удивлять, делать жизнь людей проще и комфортнее.
@@ -94,6 +90,13 @@
                         результат многолетнего опыта компании, который, несомненно, помогла достичь отличная работа профессиональной
                         команды.
                     </p>
+                </div>
+
+                <!-- Left Column - Image (Now Right) -->
+                <div class="relative">
+                    <div class="rounded-xl overflow-hidden shadow-2xl mb-6 lg:mb-0">
+                        <img src="{{ asset('assets/asset3.webp') }}" alt="Наш подход к работе" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
                 </div>
             </div>
         </div>

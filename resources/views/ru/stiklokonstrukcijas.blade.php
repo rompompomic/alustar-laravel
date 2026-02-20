@@ -188,6 +188,11 @@
                     </div>
                     @endforeach
                 </div>
+
+                {{-- Additional Image Section --}}
+                <div class="mt-12 rounded-2xl overflow-hidden shadow-lg h-[300px] md:h-[400px]">
+                    <img src="{{ asset('assets/asset5.webp') }}" alt="Примеры стеклянных конструкций" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                </div>
             </div>
         </section>
 
@@ -222,21 +227,30 @@
         <!-- MATERIALS -->
         <section class="w-full py-16 md:py-24 bg-background">
             <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
-                <div class="text-center mb-12">
-                    <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-3">Материалы</span>
+                 <div class="flex flex-col items-center text-center mb-12">
+                     <span class="inline-block text-xs font-medium text-primary uppercase tracking-widest mb-3">Материалы</span>
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground tracking-tight">Материалы и технологии</h2>
+                    <p class="mt-4 text-muted-foreground max-w-2xl mx-auto">Мы используем только сертифицированные и проверенные материалы от ведущих европейских производителей.</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    @foreach($materials as $index => $material)
-                    <div class="group flex items-center gap-4 p-6 bg-muted/30 rounded-2xl border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300">
-                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 transition-colors duration-300">
-                            <span class="text-sm font-bold text-primary transition-colors duration-300">
-                                {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
-                            </span>
-                        </div>
-                        <span class="text-sm font-medium text-foreground">{{ $material }}</span>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                     <div class="rounded-2xl overflow-hidden shadow-lg h-[300px] lg:h-[400px]">
+                        <img src="{{ asset('assets/asset6.webp') }}" alt="Материалы и технологии" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                     </div>
-                    @endforeach
+                    <div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+                            @foreach($materials as $index => $material)
+                            <div class="group flex items-center gap-4 p-4 bg-muted/30 rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 transition-colors duration-300">
+                                    <span class="text-xs font-bold text-primary transition-colors duration-300">
+                                        {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                                    </span>
+                                </div>
+                                <span class="text-sm font-medium text-foreground text-left">{{ $material }}</span>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

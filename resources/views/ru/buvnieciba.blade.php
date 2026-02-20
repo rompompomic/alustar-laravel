@@ -39,7 +39,7 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {{-- Developers --}}
-                    <div class="p-8 bg-muted/30 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md">
+                    <div class="p-8 bg-muted/30 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md group">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                                 <i data-lucide="building-2" class="w-5 h-5 text-primary-foreground"></i>
@@ -55,7 +55,7 @@
                             <li class="flex items-start gap-3 text-sm text-muted-foreground"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary mt-0.5 shrink-0"></i>Гарантийное обслуживание</li>
                         </ul>
                     </div>
-                    
+
                     {{-- Investors --}}
                     <div class="p-8 bg-muted/30 rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md">
                         <div class="flex items-center gap-3 mb-6">
@@ -88,6 +88,10 @@
                             <li class="flex items-start gap-3 text-sm text-muted-foreground"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary mt-0.5 shrink-0"></i>Персональное управление проектом</li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="mt-8 rounded-2xl overflow-hidden shadow-lg h-[300px] md:h-[400px]">
+                    <img src="{{ asset('assets/asset4.webp') }}" alt="Процесс строительства" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                 </div>
             </div>
         </section>
@@ -171,18 +175,39 @@
                             <i data-lucide="settings" class="w-5 h-5 text-primary"></i>
                         </div>
                         <h3 class="text-lg font-semibold text-foreground mb-4">Инженерные системы</h3>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Внутренние инженерные сети</li>
-                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Наружные инженерные сети</li>
-                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Отопление</li>
-                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Вентиляция</li>
-                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Электроснабжение</li>
-                            <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Водоснабжение и канализация</li>
-                        </ul>
+                        <div class="space-y-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Внутренние инженерные сети</li>
+                                <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Наружные инженерные сети</li>
+                                <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Отопление</li>
+                                <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Вентиляция</li>
+                                <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Электроснабжение</li>
+                                <li class="flex items-center gap-2 text-sm text-muted-foreground"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>Водоснабжение и канализация</li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+
+                {{-- Decorative Image Row --}}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-8">
+                     <div class="rounded-2xl overflow-hidden h-[250px] shadow-sm">
+                         <img src="{{ asset('assets/asset7.webp') }}" alt="Инженерные системы и строительство" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                     </div>
+                      <div class="p-6 md:p-8 bg-muted/30 rounded-2xl border border-border/50 flex flex-col justify-center">
+                         <div class="flex items-center gap-4 mb-4">
+                             <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-foreground">Гарантия качества</h3>
+                         </div>
+                         <p class="text-sm text-muted-foreground leading-relaxed">
+                             При строительстве инженерных систем мы используем только сертифицированные материалы и оборудование, обеспечивая долгосрочную гарантию и эффективную эксплуатацию.
+                         </p>
+                     </div>
+                </div>
 
                      {{-- Fasades --}}
-                    <div class="p-6 md:p-8 bg-muted/30 rounded-2xl border border-border/50">
+                    <div class="p-6 md:p-8 bg-muted/30 rounded-2xl border border-border/50 mt-8">
                         <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-5">
                             <i data-lucide="layers" class="w-5 h-5 text-primary"></i>
                         </div>
@@ -200,7 +225,7 @@
                     </div>
 
                      {{-- Areja infrastruktura --}}
-                    <div class="p-6 md:p-8 bg-muted/30 rounded-2xl border border-border/50">
+                    <div class="p-6 md:p-8 bg-muted/30 rounded-2xl border border-border/50 mt-6 md:mt-8">
                         <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-5">
                             <i data-lucide="fence" class="w-5 h-5 text-primary"></i>
                         </div>

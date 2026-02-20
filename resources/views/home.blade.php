@@ -88,21 +88,34 @@
 <!-- About Section -->
 <section id="about" class="w-full py-16 md:py-24 bg-[#e8e8ee]">
     <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl text-foreground tracking-tight font-extrabold max-w-4xl mx-auto lg:whitespace-nowrap">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl text-foreground tracking-tight font-extrabold max-w-[900px] mx-auto leading-tight">
                 Pilna inženiertehniskā un juridiskā atbildība
             </h2>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <div class="space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
+            <div class="flex flex-col justify-center space-y-6 lg:space-y-8">
                 <p class="text-base md:text-lg text-muted-foreground leading-relaxed">
                     AluStar ir inženiertehniskais uzņēmums, kas specializējas alumīnija–stikla konstrukciju projektēšanā, ražošanā un montāžā, kā arī pilna cikla būvniecībā.
                 </p>
                 <p class="text-base md:text-lg text-muted-foreground leading-relaxed">
                     Uzņemamies inženiertehnisko un juridisko atbildību par pieņemtajiem risinājumiem un to realizāciju.
                 </p>
+                <div class="pt-2 lg:pt-4">
+                     <a href="{{ route('about') }}" class="inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 shadow-sm">
+                        Uzzināt vairāk
+                    </a>
+                </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="relative">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                    <img src="{{ asset('assets/asset2.webp') }}" alt="AluStar komanda darbībā" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div class="flex flex-col items-center justify-center p-6 bg-background rounded-xl border border-border/50 transition-all duration-300 hover:shadow-lg hover:border-primary/30 min-h-[120px] text-center">
                     <span class="text-3xl md:text-4xl font-semibold text-primary mb-2">2007</span>
                     <span class="text-sm text-muted-foreground">Darbības sākums</span>
@@ -115,7 +128,6 @@
                     <span class="text-3xl md:text-4xl font-semibold text-primary mb-2">100%</span>
                     <span class="text-sm text-muted-foreground">Pilna atbildība</span>
                 </div>
-            </div>
         </div>
     </div>
 </section>
