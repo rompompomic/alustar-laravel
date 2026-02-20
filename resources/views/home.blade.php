@@ -10,6 +10,7 @@
     <div class="lg:hidden flex flex-col">
         <section class="relative w-full h-[50svh] min-h-[410px] max-h-[510px] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 81%, 0 100%)">
             <div class="absolute inset-0 scale-125 bg-cover bg-center" style="background-image: url('{{ asset('assets/hero-glass.webp') }}')"></div>
+            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.7);"></div>
             <div class="relative h-full flex flex-col justify-end px-4 sm:px-6 pb-24 sm:pb-28">
                 <div class="flex flex-col items-start gap-3 w-full animate-fade-up">
                     <h1 class="font-semibold text-primary-foreground text-xl sm:text-2xl tracking-[-0.72px] leading-tight">STIKLA KONSTRUKCIJAS</h1>
@@ -42,6 +43,7 @@
     <div class="hidden lg:block relative w-full h-[780px]">
         <!-- Glass Construction Section -->
         <section class="absolute left-0 top-0 w-[54%] h-full bg-muted bg-cover bg-no-repeat bg-center z-10 contrast-[1.1] saturate-[0.95]" style="background-image: url('{{ asset('assets/hero-glass.webp') }}'); clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%)">
+            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.45);"></div>
             <div class="relative flex flex-col items-start gap-11 mt-[420px] ml-[100px] w-[336px]">
                 <div class="flex flex-col items-start gap-3.5 w-full animate-fade-up">
                     <h1 class="font-semibold text-primary-foreground text-4xl tracking-[-0.72px] leading-[38px]">STIKLA KONSTRUKCIJAS</h1>
@@ -56,6 +58,7 @@
 
         <!-- Construction Section -->
         <section class="absolute right-0 top-0 w-[55%] h-full bg-cover bg-center contrast-[1.05] saturate-[0.9]" style="background-image: url('{{ asset('assets/hero-construction.webp') }}'); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%)">
+            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.45);"></div>
             <div class="relative flex flex-col items-start gap-11 mt-[450px] ml-[260px] w-[336px]">
                 <div class="flex flex-col items-start gap-3.5 w-full animate-fade-up">
                     <h1 class="font-semibold text-secondary-foreground text-4xl tracking-[-0.72px] leading-[38px]">BŪVNIECĪBA</h1>

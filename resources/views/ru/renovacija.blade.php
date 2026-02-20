@@ -7,7 +7,7 @@
     <div>
         {{-- 1. HERO --}}
         <section class="relative w-full h-[500px] md:h-[600px] overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('assets/asset1.webp') }}')"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('assets/hero-renovacii.webp') }}')"></div>
             <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.7);"></div>
             <div class="relative h-full flex items-end">
                 <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 w-full pb-16 md:pb-20">
