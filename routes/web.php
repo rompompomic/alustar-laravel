@@ -46,10 +46,12 @@ Route::prefix('ru')->name('ru.')->group(function () {
         return view('ru.about');
     })->name('about');
 
-    Route::get('/stroitelstvo', function () {
+    Route::get('/buvnieciba', function () {
         $projects = Project::where('show_on_construction', true)->get();
         return view('ru.buvnieciba', compact('projects'));
     })->name('buvnieciba');
+
+    Route::redirect('/stroitelstvo', '/ru/buvnieciba', 301);
 
     Route::get('/renovacija', function () {
         return view('ru.renovacija');
@@ -114,4 +116,3 @@ Route::get('/sitemap.xml', function () {
 
     return response()->view('sitemap', compact('urls'))->header('Content-Type', 'text/xml');
 });
-

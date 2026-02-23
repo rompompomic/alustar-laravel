@@ -67,7 +67,7 @@
         <!-- Desktop Navigation Items -->
         <ul class="hidden lg:flex items-center gap-8">
             <li>
-                <a href="{{ url('/ru/stroitelstvo') }}" class="block font-medium text-foreground/80 text-sm tracking-wide hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+                <a href="{{ url('/ru/buvnieciba') }}" class="block font-medium text-foreground/80 text-sm tracking-wide hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
                     Строительство
                 </a>
             </li>
